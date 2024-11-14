@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title> Placeholder </title>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src="/scripts/header.js" defer></script>
+    <script defer src="/scripts/restaurantSubmit.js"></script>
+    <script defer src="/scripts/deleteRestaurant.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+        
+
+
+    <div class="grid-restaurants">
+        <% for (let i = 0; i < restaurantData.length; i++) { %>
+            <article class="restaurant-grid">
+                <a href="/restaurants/<%= restaurantData[i].id %>">
+                    <%= restaurantData[i].name %>
+                </a>
+                <button id="delete_restaurant-<%= restaurantData[i].id %>"> X </button>
+            </article>
+        <% } %>
+    </div>
+    
+</body>
+
+<footer></footer>
